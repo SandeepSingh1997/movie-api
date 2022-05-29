@@ -22,5 +22,10 @@ public class MovieController {
 		List<Movie> list =  movieService.getAllMovies();
 		return list;
 	}
+	
+	@RequestMapping(value = "/movies/", method = RequestMethod.POST)
+	public Movie createMovie(Movie movie) {
+		return movieService.createMovie(movie);
+	}
 
 }
